@@ -12,10 +12,9 @@ paginate_path: "/actualites/page:num/"
 
 # Build settings
 markdown: kramdown
-permalink: /actualites/:year/:month/:day/:title/
+permalink: pretty
 
 plugins:
-  - jekyll-paginate
   - jekyll-feed
 
 # Association info (à personnaliser)

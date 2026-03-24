@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Contact"
+permalink: /contact/
+---
+
+<div class="page-hero page-hero--sm">
+  <div class="page-hero-content container">
+    <h1>Contact</h1>
+    <p>Nous sommes à votre disposition</p>
+  </div>
+</div>
+
+<section class="section-page">
+  <div class="container contact-grid">
+
+    <div class="contact-info">
+      <h2>Nous contacter</h2>
+      <p>Pour toute question, pour adhérer ou pour participer à nos événements, n'hésitez pas à nous joindre.</p>
+
+      <div class="contact-card">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>Adresse</strong>
+            <p>{{ site.association.adresse }}</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <strong>Téléphone</strong>
+            <p>{{ site.association.tel }}</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <p><a href="mailto:{{ site.association.contact }}">{{ site.association.contact }}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2>Envoyer un message</h2>
+      <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required placeholder="M. Jean Dupont">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jean.dupont@email.fr">
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet</label>
+          <input type="text" id="subject" name="subject" placeholder="Demande d'adhésion">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+      </form>
+      <p class="form-note">Formulaire géré par <a href="https://formspree.io" target="_blank">Formspree</a> (gratuit, sans serveur)</p>
+    </div>
+
+  </div>
+</section>

@@ -25,21 +25,21 @@ permalink: /actualites/
       {% for post in site.posts %}
       <article class="news-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
         {% if post.image %}
-        <a href="{{ post.url }}" class="news-card-img">
+        <a href="{{ post.url | relative_url }}" class="news-card-img">
           <img src="{{ post.image | replace: '/upload/', '/upload/w_600,h_380,c_fill/' }}" alt="{{ post.title }}" loading="lazy">
         </a>
         {% else %}
-        <a href="{{ post.url }}" class="news-card-img news-card-img--placeholder">
+        <a href="{{ post.url | relative_url }}" class="news-card-img news-card-img--placeholder">
           <span>⚜</span>
         </a>
         {% endif %}
         <div class="news-card-body">
           <span class="news-category">{{ post.category | default: "Actualité" }}</span>
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
           <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
           <div class="news-card-footer">
             <time>{{ post.date | date: "%d %B %Y" }}</time>
-            <a href="{{ post.url }}" class="read-more">Lire la suite →</a>
+            <a href="{{ post.url | relative_url }}" class="read-more">Lire la suite →</a>
           </div>
         </div>
       </article>
