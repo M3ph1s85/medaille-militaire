@@ -1,5 +1,5 @@
-title: "Médaille Militaire - Section [Votre Ville]"
-description: "Association des médaillés militaires - Section locale"
+title: "Médaille Militaire - Section pays de Saint Gilles Croix de Vie"
+description: "Association des médaillés militaires - Section 1383"
 baseurl: "/medaille-militaire"
 url: "https://m3ph1s85.github.io"
 
@@ -19,9 +19,9 @@ plugins:
 
 # Association info (à personnaliser)
 association:
-  nom: "Médaille Militaire – Section de [Votre Ville]"
+  nom: "Médaille Militaire – Section pays de Saint Gilles Croix de Vie"
   fondee: "1920"
-  president: "M. Jean Dupont"
-  contact: "contact@medaillemilitaire-[ville].fr"
-  adresse: "1 Place de la République, [Ville]"
+  president: "M. Christophe MATHIAS"
+  contact: "contact@medaillemilitaire-1383.fr"
+  adresse: "1 Place de la République, Saint Gilles Croix de Vie"
   tel: "01 23 45 67 89"
