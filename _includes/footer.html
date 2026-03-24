@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-emblem">⚜</div>
+      <p>{{ site.association.nom }}</p>
+      <p>Fondée en {{ site.association.fondee }}</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <a href="/">Accueil</a>
+      <a href="/association/">L'Association</a>
+      <a href="/actualites/">Actualités</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>{{ site.association.adresse }}</p>
+      <p>{{ site.association.tel }}</p>
+      <p><a href="mailto:{{ site.association.contact }}">{{ site.association.contact }}</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ 'now' | date: "%Y" }} {{ site.association.nom }}. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>

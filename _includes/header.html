@@ -1,0 +1,28 @@
+<header class="site-header" id="header">
+  <div class="header-top">
+    <div class="container header-top-inner">
+      <span>{{ site.association.contact }}</span>
+      <span>{{ site.association.tel }}</span>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container header-main-inner">
+      <a href="/" class="site-logo">
+        <div class="logo-emblem">⚜</div>
+        <div class="logo-text">
+          <span class="logo-title">Médaille Militaire</span>
+          <span class="logo-subtitle">Section de [Votre Ville]</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
+        <a href="/association/" class="nav-link {% if page.url contains '/association/' %}active{% endif %}">L'Association</a>
+        <a href="/actualites/" class="nav-link {% if page.url contains '/actualites/' %}active{% endif %}">Actualités</a>
+        <a href="/contact/" class="nav-link {% if page.url contains '/contact/' %}active{% endif %}">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>

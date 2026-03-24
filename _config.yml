@@ -1,0 +1,28 @@
+title: "Médaille Militaire - Section [Votre Ville]"
+description: "Association des médaillés militaires - Section locale"
+baseurl: ""
+url: "https://votre-username.github.io"
+
+# Cloudinary config
+cloudinary_cloud_name: "votre-cloud-name"
+
+# Blog settings
+paginate: 6
+paginate_path: "/actualites/page:num/"
+
+# Build settings
+markdown: kramdown
+permalink: /actualites/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+
+# Association info (à personnaliser)
+association:
+  nom: "Médaille Militaire – Section de [Votre Ville]"
+  fondee: "1920"
+  president: "M. Jean Dupont"
+  contact: "contact@medaillemilitaire-[ville].fr"
+  adresse: "1 Place de la République, [Ville]"
+  tel: "01 23 45 67 89"

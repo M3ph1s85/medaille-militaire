@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="post-detail">
+  <div class="post-hero">
+    {% if page.image %}
+    <div class="post-hero-img" style="background-image: url('{{ page.image }}')"></div>
+    {% endif %}
+    <div class="post-hero-overlay">
+      <div class="container">
+        <span class="post-category">{{ page.category | default: "Actualité" }}</span>
+        <h1>{{ page.title }}</h1>
+        <div class="post-meta">
+          <time>{{ page.date | date: "%d %B %Y" }}</time>
+          {% if page.lieu %}<span class="separator">·</span><span>{{ page.lieu }}</span>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container post-body">
+    <div class="post-content">
+      {{ content }}
+
+      {% if page.galerie %}
+      <div class="post-gallery">
+        <h3>Galerie photos</h3>
+        <div class="gallery-grid">
+          {% for photo in page.galerie %}
+          <a href="{{ photo.url }}" class="gallery-item" target="_blank">
+            <img src="{{ photo.url | replace: '/upload/', '/upload/w_600,h_400,c_fill/' }}" alt="{{ photo.alt | default: 'Photo' }}" loading="lazy">
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Informations</h4>
+        {% if page.date %}<p><strong>Date :</strong> {{ page.date | date: "%d/%m/%Y" }}</p>{% endif %}
+        {% if page.lieu %}<p><strong>Lieu :</strong> {{ page.lieu }}</p>{% endif %}
+        {% if page.category %}<p><strong>Catégorie :</strong> {{ page.category }}</p>{% endif %}
+      </div>
+      <a href="/actualites/" class="btn-back">← Retour aux actualités</a>
+    </div>
+  </div>
+</article>

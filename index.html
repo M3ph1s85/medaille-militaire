@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Accueil"
+---
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">Depuis 1920</div>
+    <h1 class="hero-title">Médaille Militaire<br><em>Section de [Votre Ville]</em></h1>
+    <p class="hero-subtitle">Rassembler, honorer et perpétuer la mémoire de ceux qui ont servi la France</p>
+    <div class="hero-cta">
+      <a href="/association/" class="btn btn-primary">Découvrir l'association</a>
+      <a href="/actualites/" class="btn btn-outline">Nos actualités</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section class="section-values">
+  <div class="container">
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎖</div>
+        <h3>Honneur</h3>
+        <p>Porter et défendre les valeurs de la Médaille Militaire, la plus haute décoration pour les sous-officiers et soldats.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Fraternité</h3>
+        <p>Tisser des liens durables entre les médaillés et leurs familles, dans l'esprit de solidarité militaire.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🕊</div>
+        <h3>Mémoire</h3>
+        <p>Participer aux cérémonies patriotiques et transmettre les valeurs républicaines aux jeunes générations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÉSENTATION RAPIDE -->
+<section class="section-about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <span class="section-label">L'Association</span>
+      <h2>Une fraternité au service de la mémoire nationale</h2>
+      <p>Notre section regroupe les titulaires de la Médaille Militaire dans la région. Fondée il y a plus d'un siècle, elle participe activement à la vie commémorative locale et nationale.</p>
+      <p>Nous organisons des cérémonies, des banquets fraternels et nous veillons à la transmission des valeurs militaires républicaines.</p>
+      <a href="/association/" class="btn btn-primary">En savoir plus</a>
+    </div>
+    <div class="about-image">
+      <div class="about-image-placeholder">
+        <!-- Remplacez cette URL par votre image Cloudinary -->
+        <img src="https://res.cloudinary.com/votre-cloud/image/upload/v1/association/photo-principale.jpg" 
+             alt="Photo de l'association"
+             onerror="this.parentElement.innerHTML='<div class=\'img-fallback\'>📷 Votre photo ici<br><small>Uploadez sur Cloudinary</small></div>'">
+      </div>
+      <div class="about-stat">
+        <strong>100+</strong>
+        <span>membres actifs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DERNIÈRES ACTUALITÉS -->
+<section class="section-news">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Vie de l'association</span>
+      <h2>Dernières actualités</h2>
+    </div>
+    <div class="news-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="news-card">
+        {% if post.image %}
+        <a href="{{ post.url }}" class="news-card-img">
+          <img src="{{ post.image | replace: '/upload/', '/upload/w_600,h_380,c_fill/' }}" alt="{{ post.title }}" loading="lazy">
+        </a>
+        {% else %}
+        <a href="{{ post.url }}" class="news-card-img news-card-img--placeholder">
+          <span>⚜</span>
+        </a>
+        {% endif %}
+        <div class="news-card-body">
+          <span class="news-category">{{ post.category | default: "Actualité" }}</span>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <div class="news-card-footer">
+            <time>{{ post.date | date: "%d %B %Y" }}</time>
+            <a href="{{ post.url }}" class="read-more">Lire la suite →</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/actualites/" class="btn btn-outline">Toutes les actualités</a>
+    </div>
+  </div>
+</section>
