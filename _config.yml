@@ -1,7 +1,7 @@
 title: "Médaille Militaire - Section [Votre Ville]"
 description: "Association des médaillés militaires - Section locale"
-baseurl: ""
-url: "https://votre-username.github.io"
+baseurl: "/medaille-militaire"
+url: "https://m3ph1s85.github.io"
 
 # Cloudinary config
 cloudinary_cloud_name: "votre-cloud-name"

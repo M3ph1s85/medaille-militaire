@@ -44,7 +44,7 @@ layout: default
         {% if page.lieu %}<p><strong>Lieu :</strong> {{ page.lieu }}</p>{% endif %}
         {% if page.category %}<p><strong>Catégorie :</strong> {{ page.category }}</p>{% endif %}
       </div>
-      <a href="/actualites/" class="btn-back">← Retour aux actualités</a>
+      <a href="{{ '/actualites/' | relative_url }}" class="btn-back">← Retour aux actualités</a>
     </div>
   </div>
 </article>
