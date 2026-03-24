@@ -1,0 +1,56 @@
+---
+layout: default
+title: "Actualités"
+permalink: /actualites/
+---
+
+<div class="page-hero page-hero--sm">
+  <div class="page-hero-content container">
+    <h1>Actualités</h1>
+    <p>Événements, cérémonies et vie de l'association</p>
+  </div>
+</div>
+
+<section class="section-page">
+  <div class="container">
+
+    <div class="news-filter">
+      <button class="filter-btn active" data-filter="all">Tout</button>
+      <button class="filter-btn" data-filter="ceremonie">Cérémonies</button>
+      <button class="filter-btn" data-filter="evenement">Événements</button>
+      <button class="filter-btn" data-filter="vie-association">Vie de l'association</button>
+    </div>
+
+    <div class="news-grid news-grid--full">
+      {% for post in site.posts %}
+      <article class="news-card" data-category="{{ post.category | downcase | replace: ' ', '-' }}">
+        {% if post.image %}
+        <a href="{{ post.url }}" class="news-card-img">
+          <img src="{{ post.image | replace: '/upload/', '/upload/w_600,h_380,c_fill/' }}" alt="{{ post.title }}" loading="lazy">
+        </a>
+        {% else %}
+        <a href="{{ post.url }}" class="news-card-img news-card-img--placeholder">
+          <span>⚜</span>
+        </a>
+        {% endif %}
+        <div class="news-card-body">
+          <span class="news-category">{{ post.category | default: "Actualité" }}</span>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <div class="news-card-footer">
+            <time>{{ post.date | date: "%d %B %Y" }}</time>
+            <a href="{{ post.url }}" class="read-more">Lire la suite →</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <div class="empty-state">
+      <p>Aucune actualité pour le moment. Revenez bientôt !</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
