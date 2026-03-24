@@ -54,12 +54,13 @@ permalink: /association/
           <li><strong>Vice-président :</strong> M. [Nom]</li>
           <li><strong>Secrétaire :</strong> M. [Nom]</li>
           <li><strong>Trésorier :</strong> M. [Nom]</li>
+          <li><strong>Secretaire :</strong> M. TOTO [Nom]</li>
         </ul>
       </div>
       <div class="sidebar-card">
         <h4>Chiffres clés</h4>
         <div class="stat-list">
-          <div class="stat-item"><strong>100+</strong><span>membres</span></div>
+          <div class="stat-item"><strong>90</strong><span>membres</span></div>
           <div class="stat-item"><strong>{{ site.association.fondee }}</strong><span>fondée en</span></div>
           <div class="stat-item"><strong>10+</strong><span>événements/an</span></div>
         </div>
