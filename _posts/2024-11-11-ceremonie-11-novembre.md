@@ -3,7 +3,7 @@ layout: post
 title: "Cérémonies du 11 novembre 2025 – Commémoration de l’Armistice"
 date: 2025-11-11 10:00:00 +0100
 category: Cérémonie
-lieu: "Saint-Gilles-Croix-de-Vie / Saint-Hilaire-de-Riez"
+lieu: "Saint-Gilles-Croix-de-Vie / Saint-Hilaire-de-Riez/Notre Dame de Riez"
 author: "Christophe MATHIAS"
 
 # Image principale
