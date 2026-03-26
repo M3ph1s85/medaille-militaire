@@ -480,7 +480,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
   overflow: hidden;
 }
 .page-hero::before {
-  content: '⚜';
+  content: '🎖';
   position: absolute;
   font-size: 20rem;
   opacity: 0.03;
