@@ -41,7 +41,7 @@ permalink: /association/
 
       <div class="content-block">
         <h2>Nous rejoindre</h2>
-        <p>Vous êtes titulaire de la Médaille Militaire et souhaitez rejoindre notre section ? Contactez-nous par email ou par téléphone. La cotisation annuelle est de <strong>[montant] €</strong>.</p>
+        <p>Vous souhaitez rejoindre notre section ? Contactez-nous par email.</strong>.</p>
         <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Nous contacter</a>
       </div>
     </div>
