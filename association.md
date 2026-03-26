@@ -52,7 +52,7 @@ permalink: /association/
         <ul class="bureau-list">
           <li><strong>Président :</strong> {{ site.association.president }}</li>
           <li><strong>Vice-président :</strong> M. Daniel RONDEAU </li>
-          <li><strong>Secrétaire :</strong> M. Daniel VINCHE</li>
+          <li><strong>Trésorier :</strong> M. Daniel VINCHE</li>
           <li><strong>Vice-présidente du comité local des dames d'entraide :</strong> Mme Catherine GENIN</li>
           <li><strong>Délégué national :</strong> M. Marc WOZNIEWICZ</li>
           <li><strong>Trésorier suppléant et photographe:</strong></li>
