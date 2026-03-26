@@ -41,7 +41,7 @@ permalink: /association/
 
       <div class="content-block">
         <h2>Nous rejoindre</h2>
-        <p>Vous souhaitez rejoindre notre section ? Contactez-nous par email.</strong>.</p>
+        <p>Vous souhaitez rejoindre notre section ?</p>
         <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Nous contacter</a>
       </div>
     </div>
