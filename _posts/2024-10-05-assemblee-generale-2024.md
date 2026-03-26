@@ -2,7 +2,7 @@
 layout: post
 title: "Concours de belote du 7 mars 2026 – Médaille Militaire et UNC"
 date: 2026-03-07 14:00:00 +0100
-category: Activité
+category: Vie de l'association
 lieu: "Salle Marie de Beaucaire, Saint-Gilles-Croix-de-Vie"
 author: "Christophe MATHIAS"
 
