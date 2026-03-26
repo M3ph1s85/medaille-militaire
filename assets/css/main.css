@@ -524,7 +524,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
   border-bottom: 1px solid var(--gray-100);
 }
 .styled-list li::before {
-  content: '⚜';
+  content: '🎖';
   position: absolute;
   left: 0;
   font-size: 0.7rem;
