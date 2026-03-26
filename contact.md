@@ -65,7 +65,6 @@ permalink: /contact/
         </div>
         <button type="submit" class="btn btn-primary">Envoyer le message</button>
       </form>
-      <p class="form-note">* Formulaire géré par <a href="https://formspree.io" target="_blank">Formspree</a> (gratuit, sans serveur)</p>
     </div>
 
   </div>
