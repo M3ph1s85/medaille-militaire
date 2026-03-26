@@ -1,28 +1,27 @@
-<header class="site-header" id="header">
-  <div class="header-top">
-    <div class="container header-top-inner">
-      <span>{{ site.association.contact }}</span>
-      <span>{{ site.association.tel }}</span>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-emblem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 170" class="medal-svg"><rect x="13" y="0" width="74" height="7" rx="2.5" fill="#b8973a" stroke="#8a6e20" stroke-width="1"/><rect x="15" y="7" width="22" height="76" rx="2" fill="#2d8a2d"/><rect x="37" y="7" width="26" height="76" rx="2" fill="#d4af5a"/><rect x="63" y="7" width="22" height="76" rx="2" fill="#2d8a2d"/><rect x="46" y="81" width="8" height="14" rx="2" fill="#b8973a"/><circle cx="50" cy="130" r="38" fill="#b8973a" stroke="#8a6e20" stroke-width="2"/><circle cx="50" cy="130" r="29" fill="#d4af5a" stroke="#8a6e20" stroke-width="1.5"/><circle cx="50" cy="130" r="9" fill="#b8973a"/><line x1="50" y1="114" x2="50" y2="121" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="50" y1="139" x2="50" y2="146" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="34" y1="130" x2="41" y2="130" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="59" y1="130" x2="66" y2="130" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="39" y1="119" x2="44" y2="124" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="56" y1="136" x2="61" y2="141" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="61" y1="119" x2="56" y2="124" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/><line x1="44" y1="136" x2="39" y2="141" stroke="#8a6e20" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <p>{{ site.association.nom }}</p>
+      <p>Fondée en {{ site.association.fondee }}</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <a href="{{ '/' | relative_url }}">Accueil</a>
+      <a href="{{ '/association/' | relative_url }}">L'Association</a>
+      <a href="{{ '/actualites/' | relative_url }}">Actualités</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>{{ site.association.adresse }}</p>
+      <p>{{ site.association.tel }}</p>
+      <p><a href="mailto:{{ site.association.contact }}">{{ site.association.contact }}</a></p>
     </div>
   </div>
-  <div class="header-main">
-    <div class="container header-main-inner">
-      <a href="{{ '/' | relative_url }}" class="site-logo">
-        <div class="logo-emblem">⚜</div>
-        <div class="logo-text">
-          <span class="logo-title">Médaille Militaire</span>
-          <span class="logo-subtitle">Section des Pays de Saint Gilles Croix de Vie</span>
-        </div>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" id="siteNav">
-        <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
-        <a href="{{ '/association/' | relative_url }}" class="nav-link {% if page.url contains '/association/' %}active{% endif %}">L'Association</a>
-        <a href="{{ '/actualites/' | relative_url }}" class="nav-link {% if page.url contains '/actualites/' %}active{% endif %}">Actualités</a>
-        <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url contains '/contact/' %}active{% endif %}">Contact</a>
-      </nav>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ 'now' | date: "%Y" }} {{ site.association.nom }}. Tous droits réservés.</p>
     </div>
   </div>
-</header>
+</footer>
