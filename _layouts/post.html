@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css"/>
+
 <article class="post-detail">
   <div class="post-hero">
     {% if page.image %}
@@ -18,17 +21,15 @@ layout: default
       </div>
     </div>
   </div>
-
   <div class="container post-body">
     <div class="post-content">
       {{ content }}
-
       {% if page.galerie %}
       <div class="post-gallery">
         <h3>Galerie photos</h3>
         <div class="gallery-grid">
           {% for photo in page.galerie %}
-          <a href="{{ photo.url }}" class="gallery-item" target="_blank">
+          <a href="{{ photo.url }}" class="gallery-item glightbox" data-gallery="galerie-article" data-title="{{ photo.alt | default: 'Photo' }}">
             <img src="{{ photo.url | replace: '/upload/', '/upload/w_600,h_400,c_fill/' }}" alt="{{ photo.alt | default: 'Photo' }}" loading="lazy">
           </a>
           {% endfor %}
@@ -36,7 +37,6 @@ layout: default
       </div>
       {% endif %}
     </div>
-
     <div class="post-sidebar">
       <div class="sidebar-card">
         <h4>Informations</h4>
@@ -48,3 +48,18 @@ layout: default
     </div>
   </div>
 </article>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+<script>
+  GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,
+    zoomable: true,
+    keyboardNavigation: true,
+    openEffect: 'fade',
+    closeEffect: 'fade',
+  });
+</script>
