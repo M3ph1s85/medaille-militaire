@@ -23,4 +23,5 @@ association:
   fondee: "1976"
   president: "M. Christophe MATHIAS"
   contact: "MedMil1383@hotmail.com"
-  adresse: "24 rue Athanase Boisliveau\n85220 l'Aiguillon-sur-Vie"
+  adresse_ligne1: "24 rue Athanase Boisliveau"
+  adresse_ligne2: "85220 l'Aiguillon-sur-Vie"
