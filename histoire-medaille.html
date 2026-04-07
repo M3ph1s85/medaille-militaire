@@ -1,0 +1,600 @@
+---
+layout: default
+title: "Histoire de la Médaille Militaire"
+description: "Découvrez l'histoire de la Médaille militaire, créée le 22 janvier 1852 par Louis Napoléon Bonaparte."
+permalink: /histoire-medaille/
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+  .histoire-page {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* HERO */
+  .histoire-hero {
+    background: #1c2b1e;
+    color: #f5f0e8;
+    margin: 0 -1.5rem 4rem;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .histoire-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(212,175,55,0.04) 40px,
+      rgba(212,175,55,0.04) 41px
+    );
+  }
+  .hero-medal-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .histoire-hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0 0 1rem;
+    position: relative;
+    color: #f5f0e8;
+  }
+  .hero-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #c8b97a;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+    position: relative;
+  }
+  .hero-date-badge {
+    display: inline-block;
+    border: 1px solid rgba(212,175,55,0.4);
+    color: #c8b97a;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    position: relative;
+  }
+
+  /* INTRO */
+  .intro-block {
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 0 2rem;
+    margin-bottom: 3.5rem;
+    align-items: start;
+  }
+  .intro-line {
+    background: #b8a040;
+    align-self: stretch;
+  }
+  .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+  }
+  .intro-text strong {
+    font-weight: 400;
+    color: #1c2b1e;
+  }
+
+  /* SECTION */
+  .section-block {
+    margin-bottom: 4rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #d4c07a;
+  }
+  .section-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #d4c07a;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1c2b1e;
+    margin: 0;
+  }
+  .section-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #333;
+  }
+  .section-body p {
+    margin: 0 0 1.2rem;
+  }
+
+  /* CITATION */
+  .citation-block {
+    background: #f7f4ed;
+    border-left: 3px solid #b8a040;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+  }
+  .citation-source {
+    display: block;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2rem 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: linear-gradient(to bottom, #d4c07a, #1c2b1e 60%, transparent);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 0 0 2rem 1.5rem;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0.35rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #b8a040;
+    border: 2px solid #f7f4ed;
+    outline: 1px solid #b8a040;
+  }
+  .timeline-year {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1c2b1e;
+    margin-bottom: 0.3rem;
+  }
+  .timeline-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  /* CONDITIONS GRID */
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .condition-card {
+    background: #f7f4ed;
+    border: 1px solid #ddd3a8;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+  .condition-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    color: #b8a040;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .condition-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  /* STAT BANNERS */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #ddd3a8;
+    border: 1px solid #ddd3a8;
+    margin: 2.5rem 0;
+  }
+  .stat-item {
+    background: #1c2b1e;
+    color: #f5f0e8;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d4c07a;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #a8b8aa;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  /* PRESIDENCE */
+  .preseance-block {
+    background: #1c2b1e;
+    color: #f5f0e8;
+    padding: 2rem 2rem 1.5rem;
+    margin: 2rem 0;
+  }
+  .preseance-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    color: #d4c07a;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 1.2rem;
+    font-weight: 400;
+  }
+  .preseance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .preseance-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(212,175,55,0.15);
+    font-size: 0.92rem;
+  }
+  .preseance-list li:last-child {
+    border-bottom: none;
+  }
+  .preseance-rank {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    color: #d4c07a;
+    font-weight: 400;
+    flex-shrink: 0;
+    min-width: 1.5rem;
+    text-align: center;
+  }
+  .preseance-active {
+    color: #d4c07a;
+    font-weight: 400;
+  }
+
+  /* DEVISE FINALE */
+  .devise-finale {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid #ddd3a8;
+  }
+  .devise-finale .medal-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .devise-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #1c2b1e;
+    letter-spacing: 0.05em;
+  }
+  .devise-sous {
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .stats-row { grid-template-columns: 1fr; }
+    .histoire-hero { padding: 3rem 1.5rem 2.5rem; }
+  }
+</style>
+
+<div class="histoire-page">
+
+  <!-- HERO -->
+  <div class="histoire-hero">
+    <span class="hero-medal-icon">🎖</span>
+    <h1>La Médaille Militaire</h1>
+    <p class="hero-subtitle">Valeur &amp; Discipline</p>
+    <span class="hero-date-badge">Instituée le 22 janvier 1852</span>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <div class="intro-line"></div>
+    <p class="intro-text">
+      Le 22 janvier 1852, soit moins de deux mois après le coup d'État du 2 décembre 1851,
+      <strong>Louis Napoléon Bonaparte</strong>, président de la République, institua la Médaille
+      militaire pour récompenser les sous-officiers et soldats trop souvent ignorés par la
+      Légion d'honneur. Troisième décoration française dans l'ordre de préséance, elle reste
+      aujourd'hui le symbole du courage, du dévouement et de l'honneur militaire.
+    </p>
+  </div>
+
+  <!-- SECTION 1 — CRÉATION -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">I</span>
+      <h2 class="section-title">Une nécessité sociale et politique</h2>
+    </div>
+    <div class="section-body">
+      <p>
+        Au cours du XIX<sup>e</sup> siècle, la Légion d'honneur avait quasiment déserté la poitrine
+        des hommes de troupe, en devenant peu à peu le privilège des officiers. Le prince président
+        en était pleinement conscient.
+      </p>
+
+      <div class="citation-block">
+        « Quand on est témoin, comme moi, de tout ce qu'il y a de dévouement, d'abnégation et de
+        patriotisme dans les rangs de l'armée, on déplore souvent que le gouvernement ait si peu
+        de moyens de reconnaître de si grandes épreuves et de si grands services. »
+        <span class="citation-source">— Louis Napoléon Bonaparte, première distribution de Médailles militaires, 21 mars 1852</span>
+      </div>
+
+      <p>
+        La première distribution eut lieu le <strong>21 mars 1852</strong> dans la cour des Tuileries
+        devant 6 000 soldats. Ce jour-là, le prince remit à 48 militaires non officiers l'insigne
+        dont il avait arrêté les caractéristiques par décret le 29 février 1852 : orné à l'avers
+        de son effigie, au revers de la devise <em>« Valeur et discipline »</em>, surmonté de l'aigle
+        impériale et suspendu à un ruban jaune liseré vert.
+      </p>
+      <p>
+        Une deuxième distribution, bien plus solennelle, eut lieu le <strong>10 mai 1852</strong>
+        au Champ de Mars devant quatre-vingt mille hommes. Le prince décora 1 705 sous-officiers
+        et soldats, puis épingla la Médaille militaire sur la poitrine des généraux Reille et
+        Vaillant, déjà grands-croix de la Légion d'honneur — créant ainsi, selon le mot du général
+        Dubail, une <em>« camaraderie nouvelle »</em> entre le général et le soldat.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — L'INSIGNE -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">II</span>
+      <h2 class="section-title">L'insigne à travers les régimes</h2>
+    </div>
+    <div class="section-body">
+      <p>
+        Les insignes fabriqués pendant la Présidence, dits <em>« du premier type »</em>, sont
+        sommés d'une aigle qui fait corps avec la médaille. Sous l'Empire, les insignes dits
+        <em>« du second type »</em> comportent une aigle aux ailes détachées de la couronne de laurier.
+        La médaille, statutairement d'argent, peut comporter des éléments en vermeil, voire en or
+        pour de très rares exemplaires.
+      </p>
+      <p>
+        Devenue républicaine le <strong>4 septembre 1870</strong>, la Médaille militaire changea
+        de symboles le 8 novembre. À l'avers, Cérès déesse de la Patrie remplaça l'effigie
+        de Louis Napoléon, tandis que l'exergue <em>« République française »</em> s'inscrivit dans
+        le listel bleu. En bélière, un trophée militaire succéda à l'aigle impériale.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-number">1852</span>
+          <span class="stat-label">Année de création</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+1 million</span>
+          <span class="stat-label">Médailles décernées</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">200 000</span>
+          <span class="stat-label">Médaillés vivants</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 — GRANDES FIGURES -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">III</span>
+      <h2 class="section-title">Les grandes figures médaillées</h2>
+    </div>
+    <div class="section-body">
+      <p>
+        La Médaille militaire côtoya souvent la Légion d'honneur sur la poitrine des braves.
+        Parmi les chefs militaires français, furent notamment distingués les maréchaux
+        <strong>Foch, Joffre, Lyautey, Juin, de Lattre de Tassigny, Leclerc</strong> ainsi que
+        le général Gouraud.
+      </p>
+      <p>
+        Georges Guynemer fut décoré de la Médaille militaire le 21 juillet 1915, puis nommé
+        chevalier de la Légion d'honneur le 24 décembre suivant en tant que sous-officier.
+        Quelques étrangers illustres furent également distingués, tels le maréchal French, le
+        général Pershing, le général Eisenhower et le maréchal Montgomery. Winston Churchill
+        et le président Roosevelt comptèrent parmi les très rares civils à la recevoir.
+      </p>
+      <p>
+        Les femmes furent admises à la recevoir dès le Second Empire ; depuis 1859, un peu moins
+        de <strong>2 000 femmes</strong> ont reçu la décoration — des cantinières aux Résistantes,
+        en passant par les militaires d'aujourd'hui.
+      </p>
+
+      <div class="citation-block">
+        « Et maintenant, te voilà autant que moi. »
+        <br>« Avec moins de décompte et moins de galon… »
+        <br>« Tu vois bien, nous en sommes au même point. Donne-moi la main. »
+        <span class="citation-source">— Échange entre le maréchal Canrobert et un fusilier dans les tranchées de Sébastopol, 1855</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 — CHRONOLOGIE -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">IV</span>
+      <h2 class="section-title">Chronologie</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">22 janvier 1852</div>
+        <div class="timeline-desc">Louis Napoléon Bonaparte institue la Médaille militaire par décret, pour récompenser les sous-officiers et soldats.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">21 mars 1852</div>
+        <div class="timeline-desc">Première remise officielle dans la cour des Tuileries — 48 militaires non officiers décorés devant 6 000 soldats.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">10 mai 1852</div>
+        <div class="timeline-desc">Grande cérémonie au Champ de Mars : 1 705 soldats décorés ainsi que les généraux Reille et Vaillant, créant la « camaraderie nouvelle ».</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1854 – 1856</div>
+        <div class="timeline-desc">La campagne de Crimée constitue le baptême du feu de la Médaille militaire ; les soldats s'approprient définitivement la distinction.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">4 septembre 1870</div>
+        <div class="timeline-desc">La Médaille militaire devient républicaine. L'effigie impériale cède la place à Cérès, déesse de la Patrie.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1914 – 1918</div>
+        <div class="timeline-desc">Environ 230 000 Médailles militaires sont décernées pendant la seule Première Guerre mondiale.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">28 novembre 1962</div>
+        <div class="timeline-desc">Le décret 62.1472, signé du général de Gaulle, codifie définitivement l'organisation et le fonctionnement de la Médaille militaire.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 — CONDITIONS -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">V</span>
+      <h2 class="section-title">Conditions d'attribution</h2>
+    </div>
+    <div class="section-body">
+      <p>
+        Destinée aux sous-officiers et soldats, la Médaille militaire peut être attribuée à
+        ceux qui remplissent l'une des quatre conditions suivantes, telles que définies par
+        le Code de la Légion d'honneur et de la Médaille militaire de 1962 :
+      </p>
+      <div class="conditions-grid">
+        <div class="condition-card">
+          <span class="condition-num">1°</span>
+          <p class="condition-text">Compter huit années de services militaires</p>
+        </div>
+        <div class="condition-card">
+          <span class="condition-num">2°</span>
+          <p class="condition-text">Avoir été cité à l'ordre de l'armée, quelle que soit l'ancienneté</p>
+        </div>
+        <div class="condition-card">
+          <span class="condition-num">3°</span>
+          <p class="condition-text">Avoir reçu une blessure en combattant devant l'ennemi ou en service commandé</p>
+        </div>
+        <div class="condition-card">
+          <span class="condition-num">4°</span>
+          <p class="condition-text">S'être signalé par un acte de courage ou de dévouement méritant récompense</p>
+        </div>
+      </div>
+      <p>
+        Elle peut également être attribuée aux étrangers. De façon exceptionnelle, elle peut
+        être concédée par décret pris en conseil des ministres aux maréchaux de France et
+        aux officiers généraux, grands-croix de la Légion d'honneur, qui en temps de guerre
+        ont exercé un commandement en chef devant l'ennemi.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION 6 — PRÉSÉANCE -->
+  <div class="section-block">
+    <div class="section-header">
+      <span class="section-num">VI</span>
+      <h2 class="section-title">Place dans l'ordre des décorations</h2>
+    </div>
+    <div class="section-body">
+      <p>
+        La Médaille militaire est actuellement la troisième décoration française dans l'ordre
+        de préséance. Elle est administrée par le grand chancelier de la Légion d'honneur et
+        sa discipline relève du conseil de l'ordre de la Légion d'honneur. Environ
+        <strong>2 700 Médailles militaires</strong> sont décernées chaque année.
+      </p>
+
+      <div class="preseance-block">
+        <p class="preseance-title">Ordre de préséance des décorations françaises</p>
+        <ul class="preseance-list">
+          <li>
+            <span class="preseance-rank">1</span>
+            <span>Légion d'honneur</span>
+          </li>
+          <li>
+            <span class="preseance-rank">2</span>
+            <span>Ordre de la Libération</span>
+          </li>
+          <li>
+            <span class="preseance-rank">3</span>
+            <span class="preseance-active">🎖 Médaille militaire</span>
+          </li>
+          <li>
+            <span class="preseance-rank">4</span>
+            <span>Ordre national du Mérite</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEVISE FINALE -->
+  <div class="devise-finale">
+    <span class="medal-icon">🎖</span>
+    <p class="devise-text">« Valeur et Discipline »</p>
+    <p class="devise-sous">Devise de la Médaille militaire depuis 1852</p>
+  </div>
+
+</div>
