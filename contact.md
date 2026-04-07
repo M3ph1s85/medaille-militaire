@@ -23,7 +23,8 @@ permalink: /contact/
           <span class="contact-icon">📍</span>
           <div>
             <strong>Adresse</strong>
-            <p>{{ site.association.adresse }}</p>
+            <p>{{ site.association.adresse_ligne1 }}</p>
+            <p>{{ site.association.adresse_ligne2 }}</p>
           </div>
         </div>
         <div class="contact-item">
