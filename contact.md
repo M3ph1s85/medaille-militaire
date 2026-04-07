@@ -27,13 +27,13 @@ permalink: /contact/
             <p>{{ site.association.adresse_ligne2 }}</p>
           </div>
         </div>
-        <div class="contact-item">
+       <!--  <div class="contact-item">
           <span class="contact-icon">📞</span>
           <div>
             <strong>Téléphone</strong>
             <p>{{ site.association.tel }}</p>
           </div>
-        </div>
+        </div> -->
         <div class="contact-item">
           <span class="contact-icon">✉️</span>
           <div>
