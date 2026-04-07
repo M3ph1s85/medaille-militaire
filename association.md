@@ -18,7 +18,7 @@ permalink: /association/
 
       <div class="content-block">
         <h2>Notre histoire</h2>
-        <p>La section des Pays de Saint Gilles Croix de Vie de la Société Nationale de la Médaille Militaire a été fondée en <strong>1976</strong>, pour rassembler les soldats et sous-officiers décorés de la plus haute distinction pour les hommes du rang.</p>
+        <p>La section du Pays de Saint Gilles Croix de Vie de la Société Nationale de la Médaille Militaire a été fondée en <strong>1976</strong>, pour rassembler les soldats et sous-officiers décorés de la plus haute distinction pour les hommes du rang.</p>
         <p>Notre section perpétue cet esprit de fraternité entre ceux qui ont servi la France et porté les armes pour la défendre.</p>
       </div>
 
